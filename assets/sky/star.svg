@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Star</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="50%" id="radialGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Star" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" fill-opacity="0.7" fill="url(#radialGradient-1)" cx="7.5" cy="7.5" r="7.5"></circle>
+        <path d="M7.5,0.5 L7.5,14.5" id="Line" stroke="#FFFFFF" stroke-linecap="round"></path>
+        <path d="M7.66941738,3.27297077 L7.66941738,11.7582521" id="Line-Copy" stroke="#FFFFFF" stroke-linecap="round" transform="translate(7.603553, 7.303301) rotate(45.000000) translate(-7.603553, -7.303301) "></path>
+        <path d="M7.59834957,3.2123106 L7.59834957,11.697592" id="Line-Copy-2" stroke="#FFFFFF" stroke-linecap="round" transform="translate(7.603553, 7.596194) rotate(-45.000000) translate(-7.603553, -7.596194) "></path>
+        <path d="M0.5,7.5 L14.5,7.5" id="Line-2" stroke="#FFFFFF" stroke-linecap="round"></path>
+    </g>
+</svg>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="72px" height="147px" viewBox="0 0 72 147" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>samourai</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M59.8733062,82 C52.8940733,85.153191 3.51028424,96.6795582 1.43092337,96.6795582 C-0.6484375,96.6795582 -0.6484375,101.982228 5.41041556,101.982228 C11.4692686,101.982228 59.8733062,92.1083138 65.2294922,85.6275104 C70.5856782,79.146707 66.8525391,78.846809 59.8733062,82 Z" id="path-1"></path>
+        <filter x="-0.7%" y="-2.3%" width="101.5%" height="109.1%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+        <circle id="path-3" cx="48" cy="20" r="11"></circle>
+        <filter x="-2.3%" y="-2.3%" width="104.5%" height="104.5%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="-1" dy="0" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <path d="M42.6933333,35.9345757 C36.4141996,45.1613248 31.7949887,57.4079455 36.9755859,69.921875 C42.1561832,82.4358045 57.9108545,83.6422481 62.3544922,85.6275104 C66.7981298,87.6127727 72.5927734,85.6275104 71.1181641,81.3113304 C69.6435547,76.9951504 48.2417602,72.3475194 45.3984375,64.2958984 C42.5551148,56.2442775 54.4608886,42.1836531 53.5937239,37.2685601 C52.7265593,32.3534671 48.972467,26.7078266 42.6933333,35.9345757 Z" id="path-5"></path>
+        <filter x="-1.4%" y="-0.9%" width="102.7%" height="103.6%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Maquettes" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Illustration" transform="translate(-120.000000, -843.000000)">
+            <g id="samourai" transform="translate(120.000000, 843.000000)">
+                <path d="M37.7213408,84.0387579 C36.1514517,83.3325144 33.9282399,92.3684516 32.2702745,103.755885 C29.6182238,121.971012 28.4124469,146.20282 33.6402861,146.20282 C42.1363799,146.20282 47.5491901,144.030774 63.3619658,146.20282 C79.1747416,148.374867 60.0475127,82.2028204 55.5328643,84.0387579 C51.0182158,85.8746954 41.8023955,85.8746954 37.7213408,84.0387579 Z" id="Path-5" fill="#25363C"></path>
+                <path d="M37.1086736,85.5710717 C33.9441228,82.4490014 30.4321909,48.0842676 37.1086736,37.846333 C43.7851562,27.6083984 53.1894531,31.1621094 55.0947266,34.0107422 C57,36.859375 57.8086422,49.4499899 58.1584783,55.7919922 C58.9136505,69.4821316 60.0501988,83.4374218 58.1584783,85.5710717 C55.3904118,88.693142 51.3017074,87.1783642 47.6335759,87.1783642 C43.9654444,87.1783642 40.2732243,88.693142 37.1086736,85.5710717 Z" id="Path-6" fill="#FFFFFF"></path>
+                <g id="sword">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#0D2026" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <g id="visage">
+                    <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-3"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                </g>
+                <g id="bras">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                    <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-5"></use>
+                </g>
+                <path d="M47.5488281,29.8696289 C45.7734969,31.6159682 42.6196883,31.6159682 38.0874023,29.8696289 C33.527181,14.5255534 35.796224,6.85351562 44.8945312,6.85351562 C53.9928385,6.85351562 56.7093099,6.85351562 53.0439453,6.85351562 C56.585612,10.046875 56.585612,12.4290365 53.0439453,14 C47.7314453,16.3564453 50.211825,27.25012 47.5488281,29.8696289 Z" id="cheveux" fill="#0A191E"></path>
+                <path d="M44.5372445,4.03603335 C45.3453499,4.52626773 47.6477181,4.34572573 48.5372445,4.03603335 C49.4267708,3.72634097 49.2652718,8.42031069 48.5372445,8.03603335 C47.8092171,7.65175601 45.1555306,7.84902163 44.5372445,8.03603335 C43.9189583,8.22304507 43.729139,3.54579898 44.5372445,4.03603335 Z" id="elastique" fill="#FFFFFF"></path>
+                <ellipse id="chignon" fill="#0A191E" cx="46.5" cy="2.5" rx="3.5" ry="2.5"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>

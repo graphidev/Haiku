@@ -1,0 +1,56 @@
+html,
+body,
+svg {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+body > svg {
+    box-sizing: border-box;
+    width: 100vw;
+    background: url(sky/background.svg);
+    background-size: cover;
+    overflow: hidden;
+}
+
+
+#moon {
+    transform-origin: center;
+    transition: transform ease-in-out .75s;
+}
+
+#moon-light-cold,
+#moon-light-hot {
+    transition: opacity linear .5s;
+}
+
+#moon-light-hot {
+    opacity: 0;
+}
+
+.cloud {
+    opacity: .99;
+    transform-origin: center;
+    transition: transform ease-in-out .75s;
+}
+
+#cave,
+.path {
+    opacity: 0;
+    transition: opacity ease-in-out .75s;
+}
+
+.star {
+    opacity: .5;
+    transition: opacity ease-in-out 300ms, transform linear 200ms;
+}

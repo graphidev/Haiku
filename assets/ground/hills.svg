@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1511px" height="243px" viewBox="0 0 1511 243" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>hills</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="65.2234427%" y1="-360.319222%" x2="0%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#0A531A" offset="0%"></stop>
+            <stop stop-color="#04290B" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="hills" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M0.359375,84.890625 C51.4684884,60.6632988 99.6377592,43.8380444 144.867188,34.414862 C212.71133,20.2800882 298.009926,6.25959572 442.523438,18.0801125 C587.036949,29.9006293 547.745696,57.0942383 667.9375,51.7578125 C788.129304,46.4213867 843.366031,9.90978838 926.804687,2.7109375 C1010.24334,-4.48791338 1011.30763,9.21179621 1109.5625,34.414862 C1207.81737,59.6179277 1242.77486,68.1149671 1305.75781,73.640625 C1368.74077,79.1662829 1510.28906,18.0801125 1510.28906,34.414862 C1510.28906,45.3046949 1510.28906,114.61172 1510.28906,242.335937 L0.359375,242.335937 L0.359375,84.890625 Z" fill="url(#linearGradient-1)"></path>
+    </g>
+</svg>

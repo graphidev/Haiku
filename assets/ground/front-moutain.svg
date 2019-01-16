@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1774px" height="502px" viewBox="0 0 1774 502" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>front-moutain</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="78.5172124%" y1="-87.3955834%" x2="-32.8166081%" y2="102.749982%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="0.1" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-2" points="1087.05367 105.661402 1271.10103 25.6845766 1422.87733 76.8755899 1616 0.167542297 1773.74602 98.5934814 1773.74602 455 640.989937 455 640.989937 297.160927 929.908791 105.661402"></polygon>
+        <filter x="-0.4%" y="-0.9%" width="100.7%" height="101.8%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="1" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="-6" dy="4" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <polygon id="path-4" points="406.907554 96.6949614 945 488 0.958398842 501.819482"></polygon>
+        <filter x="-0.4%" y="-1.0%" width="100.8%" height="102.0%" filterUnits="objectBoundingBox" id="filter-5">
+            <feGaussianBlur stdDeviation="1" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="-6" dy="4" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 0.1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="front-moutain" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Front-mountains">
+            <g id="right">
+                <use fill="#0B1C22" fill-rule="evenodd" xlink:href="#path-2"></use>
+                <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+            </g>
+            <g id="left">
+                <use fill="#0B1C22" fill-rule="evenodd" xlink:href="#path-4"></use>
+                <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-4"></use>
+                <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+            </g>
+        </g>
+    </g>
+</svg>

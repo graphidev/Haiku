@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="39px" height="78px" viewBox="0 0 39 78" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Tree</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M19.5,0 C24.5095263,22.6871936 28.2198127,38.8528837 30.6308594,48.4970703 C33.041906,58.1412569 35.8316196,67.9755668 39,78 C32.5,76.8988997 26,76.3483495 19.5,76.3483495 C13,76.3483495 6.5,76.8988997 0,78 C2.9260589,62.8553347 5.93631281,49.0941042 9.03076172,36.7163086 C12.1252106,24.3385129 15.6149567,12.0997434 19.5,0 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Tree">
+            <g>
+                <use fill="#04290B" xlink:href="#path-1"></use>
+                <use fill-opacity="0.3" fill="#000000" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>
