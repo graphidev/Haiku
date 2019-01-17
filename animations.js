@@ -39,6 +39,10 @@
         var containerHeight = containerLayer.height;
         var containerWidth = containerLayer.width;
 
+
+        // Actualize speed
+        speedRatio = -5 + (10 * mouseEvent.pageX / containerWidth);
+
         // Updating layers position
         var xRange = containerWidth/2 - mouseEvent.pageX;
         var yRange = containerHeight/2 - mouseEvent.pageY;
