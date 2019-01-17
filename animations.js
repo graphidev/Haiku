@@ -95,6 +95,9 @@
         moonLightHot.style.opacity = verticalDistanceRatio;
         moonLightCold.style.opacity = 1 - verticalDistanceRatio;
 
+        starsList.forEach(function(star) {
+            star.style.opacity = 0.25  + 0.5 * verticalDistanceRatio;
+        });
 
         var cloudScaleRatio = 1 + .25 * verticalDistanceRatio;
         var cloudTranslateDistance = Math.ceil(250 * verticalDistanceRatio);

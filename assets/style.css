@@ -19,8 +19,6 @@ body > svg {
     box-sizing: border-box;
     width: 100vw;
     max-height: 100vh;
-    background: url(sky/background.svg);
-    background-size: cover;
     overflow: hidden;
 }
 
@@ -51,6 +49,6 @@ body > svg {
 }
 
 .star {
-    opacity: .5;
+    opacity: .25;
     transition: opacity ease-in-out 300ms, transform linear 200ms;
 }

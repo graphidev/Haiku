@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="1022px" viewBox="0 0 1440 1022" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Night sky</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="0%" x2="0%" y2="98.4714221%" id="linearGradient-1">
+            <stop stop-color="#0D2026" offset="0%"></stop>
+            <stop stop-color="#0B1C22" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Maquettes" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Illustration">
+            <g id="Night-sky" transform="translate(0.000000, -2.000000)">
+                <rect fill="url(#linearGradient-1)" x="0" y="0" width="1440" height="1024"></rect>
+                <circle id="Oval" fill="#FFFFFF" cx="393.5" cy="106.5" r="1"></circle>
+                <circle id="Oval-Copy" fill="#FFFFFF" cx="393.5" cy="206.5" r="1"></circle>
+                <circle id="Oval-Copy-2" fill="#FFFFFF" cx="163.5" cy="176.5" r="1"></circle>
+                <circle id="Oval-Copy-3" fill="#FFFFFF" cx="163.5" cy="366.5" r="1"></circle>
+                <circle id="Oval-Copy-4" fill="#FFFFFF" cx="433.5" cy="386.5" r="1"></circle>
+                <circle id="Oval-Copy-5" fill="#FFFFFF" cx="653.5" cy="356.5" r="1"></circle>
+                <circle id="Oval-Copy-6" fill="#FFFFFF" cx="653.5" cy="186.5" r="1"></circle>
+                <circle id="Oval-Copy-7" fill="#FFFFFF" cx="803.5" cy="186.5" r="1"></circle>
+                <circle id="Oval-Copy-8" fill="#FFFFFF" cx="903.5" cy="286.5" r="1"></circle>
+                <circle id="Oval-Copy-9" fill="#FFFFFF" cx="1113.5" cy="226.5" r="1"></circle>
+                <circle id="Oval-Copy-10" fill="#FFFFFF" cx="1113.5" cy="226.5" r="1"></circle>
+                <circle id="Oval-Copy-11" fill="#FFFFFF" cx="1303.5" cy="276.5" r="1"></circle>
+                <circle id="Oval-Copy-12" fill="#FFFFFF" cx="1113.5" cy="416.5" r="1"></circle>
+                <circle id="Oval-Copy-13" fill="#FFFFFF" cx="943.5" cy="416.5" r="1"></circle>
+                <circle id="Oval-Copy-14" fill="#FFFFFF" cx="803.5" cy="516.5" r="1"></circle>
+                <circle id="Oval-Copy-15" fill="#FFFFFF" cx="733.5" cy="626.5" r="1"></circle>
+                <circle id="Oval-Copy-16" fill="#FFFFFF" cx="1033.5" cy="596.5" r="1"></circle>
+                <circle id="Oval-Copy-17" fill="#FFFFFF" cx="1273.5" cy="536.5" r="1"></circle>
+                <circle id="Oval-Copy-18" fill="#FFFFFF" cx="1323.5" cy="656.5" r="1"></circle>
+                <circle id="Oval-Copy-19" fill="#FFFFFF" cx="1283.5" cy="776.5" r="1"></circle>
+                <circle id="Oval-Copy-20" fill="#FFFFFF" cx="1133.5" cy="726.5" r="1"></circle>
+                <circle id="Oval-Copy-21" fill="#FFFFFF" cx="913.5" cy="786.5" r="1"></circle>
+                <circle id="Oval-Copy-22" fill="#FFFFFF" cx="1113.5" cy="866.5" r="1"></circle>
+                <circle id="Oval-Copy-23" fill="#FFFFFF" cx="1333.5" cy="916.5" r="1"></circle>
+                <circle id="Oval-Copy-24" fill="#FFFFFF" cx="1013.5" cy="916.5" r="1"></circle>
+                <circle id="Oval-Copy-25" fill="#FFFFFF" cx="803.5" cy="916.5" r="1"></circle>
+                <circle id="Oval-Copy-26" fill="#FFFFFF" cx="803.5" cy="746.5" r="1"></circle>
+                <circle id="Oval-Copy-27" fill="#FFFFFF" cx="613.5" cy="806.5" r="1"></circle>
+                <circle id="Oval-Copy-28" fill="#FFFFFF" cx="453.5" cy="906.5" r="1"></circle>
+                <circle id="Oval-Copy-29" fill="#FFFFFF" cx="422.5" cy="676.5" r="1"></circle>
+                <circle id="Oval-Copy-30" fill="#FFFFFF" cx="382.5" cy="676.5" r="1"></circle>
+                <circle id="Oval-Copy-31" fill="#FFFFFF" cx="232.5" cy="596.5" r="1"></circle>
+                <circle id="Oval-Copy-32" fill="#FFFFFF" cx="232.5" cy="796.5" r="1"></circle>
+                <circle id="Oval-Copy-33" fill="#FFFFFF" cx="52.5" cy="726.5" r="1"></circle>
+                <circle id="Oval-Copy-34" fill="#FFFFFF" cx="72.5" cy="476.5" r="1"></circle>
+                <circle id="Oval-Copy-35" fill="#FFFFFF" cx="302.5" cy="326.5" r="1"></circle>
+                <circle id="Oval-Copy-36" fill="#FFFFFF" cx="102.5" cy="76.5" r="1"></circle>
+                <circle id="Oval-Copy-37" fill="#FFFFFF" cx="102.5" cy="76.5" r="1"></circle>
+            </g>
+        </g>
+    </g>
+</svg>
