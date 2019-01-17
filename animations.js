@@ -80,37 +80,23 @@
         cloudTextLayer.style.transform = 'translate('+spacePlanXMove+'px,'+spacePlanYMove+'px)';
         starTextLayer.style.transform = 'translate('+spacePlanXMove+'px,'+spacePlanYMove+'px)';
 
-        if(mouseEvent.pageY > containerHeight*3/4) {
+        // Global changement
+        var verticalDistanceRatio = mouseEvent.pageY/containerHeight;
 
-            cloudsList.forEach(function(cloud) {
-                cloud.style.transform = 'scale(1.25) translateY(-250px)';
-            });
+        caveLayer.style.opacity = verticalDistanceRatio;
+        pathList.forEach(function(path) {
+            path.style.opacity = verticalDistanceRatio;
+        });
 
-            caveLayer.style.opacity = '1';
-                pathList.forEach(function(path) {
-                path.style.opacity = '1';
-            });
+        moonLightHot.style.opacity = verticalDistanceRatio;
+        moonLightCold.style.opacity = 1 - verticalDistanceRatio;
 
-            moonLightCold.style.opacity = 0;
-            moonLightHot.style.opacity = 1;
 
-        }
-
-        else {
-
-            cloudsList.forEach(function(cloud) {
-                cloud.style.transform = 'scale(1) translateY(0px)';
-            });
-
-            caveLayer.style.opacity = '0';
-            pathList.forEach(function(path) {
-                path.style.opacity = '0';
-            });
-
-            moonLightCold.style.opacity = 1;
-            moonLightHot.style.opacity = 0;
-
-        }
+        var cloudScaleRatio = 1 + .25 * verticalDistanceRatio;
+        var cloudTranslateDistance = Math.ceil(250 * verticalDistanceRatio);
+        cloudsList.forEach(function(cloud) {
+            cloud.style.transform = 'scale('+cloudScaleRatio+') translateY(-'+cloudTranslateDistance+'px)';
+        });
 
         // Update last mouse coordinates
         previousCursorPosition = {
@@ -144,7 +130,7 @@
 
     /**
      *
-     * Clouds and trees animation
+     * Wind : Clouds and trees animation
      * ---
      *
     **/
