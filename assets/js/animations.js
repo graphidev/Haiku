@@ -107,7 +107,7 @@
      * ---
      *
     **/
-    // if(window.isMobileOrTablet() && window.DeviceOrientationEvent) {
+    if(window.isMobileOrTablet() && window.DeviceOrientationEvent) {
 
         window.addEventListener('deviceorientation', function(deviceOrientation) {
 
@@ -124,7 +124,8 @@
 
         }, true)
 
-    // else {
+    }
+    else {
 
         document.addEventListener('mousemove', function(mouseEvent) {
 
@@ -143,7 +144,7 @@
 
         }, false);
 
-    // }
+    }
 
 
 
