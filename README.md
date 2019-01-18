@@ -29,4 +29,4 @@ Well, not that much. But this was a realling interesting way of getting out of m
 
 So here is the lesson I got : useless things may provide satisfaction.
 
-[Enjoy](https://graphidev.github.io/Haiku/)
+[Enjoy](https://graphidev.github.io/Haiku/) (Best experience on tablets)
