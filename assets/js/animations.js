@@ -87,14 +87,14 @@
 
         // Clouds layers
         var cloudScaleRatio = 1 + .25 * yRatio;
-        var cloudTranslateDistance = Math.ceil(250 * yRatio);
+        var cloudTranslateDistance = Math.ceil(270 * yRatio);
         cloudsList.forEach(function(cloud) {
             cloud.style.transform = 'scale('+cloudScaleRatio+') translateY(-'+cloudTranslateDistance+'px)';
         });
 
         // Text layers
         cloudText.style.transform = 'translateY(-'+112 * yRatio+'px)';
-        cloudText.style.opacity = yRatio ;
+        cloudText.style.opacity = yRatio;
         moonText.style.opacity = yRatio;
         starTextLayer.style.opacity = yRatio;
         starTextMask.setAttribute('width', 388 * yRatio);
@@ -107,29 +107,7 @@
      * ---
      *
     **/
-    // if(!window.isMobileOrTablet() || !window.DeviceOrientationEvent) {
-    //
-        document.addEventListener('mousemove', function(mouseEvent) {
-
-            var mouseEvent = mouseEvent || window.event;
-            var containerLayer = canvasContainer.getBoundingClientRect();
-            var containerHeight = containerLayer.height;
-            var containerWidth = containerLayer.width;
-
-            // Actualize speed
-            speedRatio = -5 + (10 * mouseEvent.pageX / containerWidth);
-
-            // Updating layers position
-            var xRatio = mouseEvent.pageX/containerWidth/2;
-            var yRatio = mouseEvent.pageY/containerHeight;
-
-            actualizeAnimation(xRatio, yRatio);
-
-        }, false);
-    //
-    //
-    // }
-    // else {
+    // if(window.isMobileOrTablet() && window.DeviceOrientationEvent) {
 
         window.addEventListener('deviceorientation', function(deviceOrientation) {
 
@@ -145,6 +123,25 @@
 
 
         }, true)
+
+    // else {
+
+        document.addEventListener('mousemove', function(mouseEvent) {
+
+            var mouseEvent = mouseEvent || window.event;
+            var containerLayer = canvasContainer.getBoundingClientRect();
+            var containerHeight = containerLayer.height;
+            var containerWidth = containerLayer.width;
+
+            // Actualize speed
+            speedRatio = -5 + (10 * mouseEvent.pageX / containerWidth);
+
+            var xRatio = mouseEvent.pageX/containerWidth/2;
+            var yRatio = mouseEvent.pageY/containerHeight;
+
+            actualizeAnimation(xRatio, yRatio);
+
+        }, false);
 
     // }
 
@@ -191,7 +188,10 @@
             cloud.setAttribute('x', newCloudPosition);
 
             var cloudWidth = cloud.getBoundingClientRect().width;
-            var containerWidth = canvasContainer.getBoundingClientRect().width;
+            var containerWidth = canvasContainer.getAttribute('viewBox').split(' ')[2];
+
+            console.log(containerWidth);
+            console.log(cloudWidth);
 
             // Out of the viewbox to the right
             if(speedRatio > 0) {
