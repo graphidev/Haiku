@@ -5,10 +5,7 @@
     var canvasContainer = document.querySelector('body > svg');
 
     var starsList = canvasContainer.querySelectorAll('.star');
-
     var moonLayer = canvasContainer.querySelector('#moon');
-    var starTextLayer = canvasContainer.querySelector('#star-text');
-    var cloudTextLayer = canvasContainer.querySelector('#cloud-text');
     var cloudsList = canvasContainer.querySelectorAll('.cloud');
     var starsGroup = canvasContainer.querySelector('#stars');
     var samouraiLayer = canvasContainer.querySelector('#samourai');
@@ -21,42 +18,42 @@
     var pathList = canvasContainer.querySelectorAll('.path');
     var caveLayer = canvasContainer.querySelector('#cave');
 
+    var cloudTextGroup = canvasContainer.querySelector('#cloud-text');
+    var cloudText = canvasContainer.querySelector('#cloud-text-text');
+    var starTextLayer = canvasContainer.querySelector('#star-text');
+    var starTextMask = canvasContainer.querySelector('#star-text-clip rect');
+    var moonText = canvasContainer.querySelector('#moon-text');
+
     var moonLightCold = canvasContainer.querySelector('#moon-light-cold');
     var moonLightHot = canvasContainer.querySelector('#moon-light-hot');
 
     /**
      *
-     * Cursor move event
+     * Animation function
      * ---
      *
     **/
-    var previousCursorPosition = false;
-    document.addEventListener('mousemove', function(mouseEvent) {
+    var actualizeAnimation = function(xRatio, yRatio, isOrientationSource) {
 
-        var mouseEvent = mouseEvent || window.event;
+        if(isOrientationSource) {
+            xRatio = xRatio * 1000;
+        }
 
-        var containerLayer = canvasContainer.getBoundingClientRect();
-        var containerHeight = containerLayer.height;
-        var containerWidth = containerLayer.width;
-
-
-        // Actualize speed
-        speedRatio = -5 + (10 * mouseEvent.pageX / containerWidth);
-
-        // Updating layers position
-        var xRange = containerWidth/2 - mouseEvent.pageX;
-        var yRange = containerHeight/2 - mouseEvent.pageY;
+        console.log('xRatio: '+xRatio);
 
         // Front
-        var frontXMove = xRange * .1;
-        var frontYMove = yRange * .1;
+        var frontXMove = xRatio * .1;
+        var frontYMove = yRatio * .1;
+
+        console.log('frontXMove: '+frontXMove);
+
         samouraiLayer.style.transform = 'translate('+frontXMove+'px,'+frontYMove+'px)';
         bigTreeLayer.style.transform = 'translate('+frontXMove+'px,'+frontYMove+'px)';
         groundLayer.style.transform = 'translate('+frontXMove+'px,'+frontYMove+'px)';
 
         // Away
-        var firstPlanXMove = xRange * .05;
-        var firstPlanYMove = yRange * .05;
+        var firstPlanXMove = xRatio * .05;
+        var firstPlanYMove = yRatio * .05;
         hillsLayer.style.transform = 'translate('+firstPlanXMove+'px,'+firstPlanYMove+'px)';
         pathList[2].style.transform = 'translate('+firstPlanXMove+'px,'+firstPlanYMove+'px)';
         treeElements.forEach(function(tree) {
@@ -64,59 +61,94 @@
         })
 
         // Far away
-        var secondPlanXMove = xRange * .025;
-        var secondPlanYMove = yRange * .025;
+        var secondPlanXMove = xRatio * .025;
+        var secondPlanYMove = yRatio * .025;
         frontMountainsLayer.style.transform = 'translate('+secondPlanXMove+'px,'+secondPlanYMove+'px)';
         pathList[1].style.transform = 'translate('+secondPlanXMove+'px,'+secondPlanYMove+'px)';
 
         // Far far away
-        var thirdPlanXMove = xRange * .0125;
-        var thirdPlanYMove = yRange * .0125;
+        var thirdPlanXMove = xRatio * .0125;
+        var thirdPlanYMove = yRatio * .0125;
         backMountainLayer.style.transform = 'translate('+thirdPlanXMove+'px,'+thirdPlanYMove+'px)';
         caveLayer.style.transform = 'translate('+thirdPlanXMove+'px,'+thirdPlanYMove+'px)';
         pathList[0].style.transform = 'translate('+thirdPlanXMove+'px,'+thirdPlanYMove+'px)';
 
-        // Space things
-        var spacePlanXMove = xRange * .003125;
-        var spacePlanYMove = yRange * .003125;
-        moonLayer.style.transform = 'translate('+spacePlanXMove+'px,'+spacePlanYMove+'px)';
-        starsGroup.style.transform = 'translate('+spacePlanXMove/2+'px,'+spacePlanYMove/2+'px)';
-        cloudTextLayer.style.transform = 'translate('+spacePlanXMove+'px,'+spacePlanYMove+'px)';
-        starTextLayer.style.transform = 'translate('+spacePlanXMove+'px,'+spacePlanYMove+'px)';
+        // -----------------
 
-        // Global changement
-        var verticalDistanceRatio = mouseEvent.pageY/containerHeight;
-
-        caveLayer.style.opacity = verticalDistanceRatio;
+        // Path layers
+        caveLayer.style.opacity = yRatio;
         pathList.forEach(function(path) {
-            path.style.opacity = verticalDistanceRatio;
+            path.style.opacity = yRatio;
         });
 
-        moonLightHot.style.opacity = verticalDistanceRatio;
-        moonLightCold.style.opacity = 1 - verticalDistanceRatio;
+        // Moon light
+        moonLightHot.style.opacity = yRatio;
+        moonLightCold.style.opacity = 1 - yRatio;
 
+        // Stars layers
         starsList.forEach(function(star) {
-            star.style.opacity = 0.25  + 0.5 * verticalDistanceRatio;
+            star.style.opacity = 0.25  + 0.5 * yRatio;
         });
 
-        var cloudScaleRatio = 1 + .25 * verticalDistanceRatio;
-        var cloudTranslateDistance = Math.ceil(250 * verticalDistanceRatio);
+        // Clouds layers
+        var cloudScaleRatio = 1 + .25 * yRatio;
+        var cloudTranslateDistance = Math.ceil(250 * yRatio);
         cloudsList.forEach(function(cloud) {
             cloud.style.transform = 'scale('+cloudScaleRatio+') translateY(-'+cloudTranslateDistance+'px)';
         });
 
-        // Update last mouse coordinates
-        previousCursorPosition = {
-            x: mouseEvent.pageX,
-            y: mouseEvent.pageY,
-        };
+        // Text layers
+        cloudText.style.transform = 'translateY(-'+112 * yRatio+'px)';
+        cloudText.style.opacity = yRatio ;
+        moonText.style.opacity = yRatio;
+        starTextLayer.style.opacity = yRatio;
+        starTextMask.setAttribute('width', 388 * yRatio);
+
+    }
+
+    /**
+     *
+     * device mouvements
+     * ---
+     *
+    **/
+    document.addEventListener('mousemove', function(mouseEvent) {
+
+        var mouseEvent = mouseEvent || window.event;
+        var containerLayer = canvasContainer.getBoundingClientRect();
+        var containerHeight = containerLayer.height;
+        var containerWidth = containerLayer.width;
+
+        // Actualize speed
+        speedRatio = -5 + (10 * mouseEvent.pageX / containerWidth);
+
+        // Updating layers position
+        var xRatio = containerWidth/2 - mouseEvent.pageX;
+        var yRatio = mouseEvent.pageY/containerHeight;
+
+        actualizeAnimation(xRatio, yRatio, false);
 
     }, false);
+
+    window.addEventListener('deviceorientation', function(deviceOrientation) {
+
+        console.log(deviceOrientation.alpha);
+
+        var xRatio = (deviceOrientation.alpha)/90;
+        var yRatio = (deviceOrientation.beta)/45;
+
+        xRatio = (Math.abs(xRatio) < 1 ? xRatio : xRatio/xRatio);
+        yRatio = (yRatio < 0 ? 0 : (yRatio > 1 ? 1 : yRatio));
+
+        actualizeAnimation(xRatio, (1 - yRatio), true);
+
+    }, true)
+
 
 
     /**
      *
-     * Stars animation
+     * Stars animation (blink)
      * ---
      *
     **/
@@ -137,7 +169,7 @@
 
     /**
      *
-     * Wind : Clouds and trees animation
+     * Clouds and trees animation (Wind)
      * ---
      *
     **/
@@ -167,7 +199,7 @@
             else {
 
                 if(newCloudPosition + cloudWidth < 0) {
-                    cloud.setAttribute('x', containerWidth + cloudWith);
+                    cloud.setAttribute('x', containerWidth + cloudWidth);
                 }
 
             }

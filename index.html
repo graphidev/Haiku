@@ -20,7 +20,11 @@
 
                 <!-- Viewbox overflow hidden mask -->
                 <clipPath id="viewbox-clip">
-                    <rect id="rect" width="100%" height="100%" fill="none" stroke="blue" />
+                    <rect id="rect" width="100%" height="100%" fill="none" />
+                </clipPath>
+
+                <clipPath id="star-text-clip">
+                    <rect width="474" height="68" fill="none" stroke="red" x="246" y="252" />
                 </clipPath>
 
                 <!-- Star -->
@@ -67,9 +71,15 @@
 
 
                 <!-- Sky stuffs -->
-                <image id="moon" x="753" y="-152" href="assets/sky/moon.svg" />
-                <image id="cloud-text" x="192" y="253" href="assets/sky/text-cloud.svg" />
-                <image id="star-text" x="45" y="51" href="assets/sky/text-star.svg" />
+                <image id="moon" x="1000" y="0" href="assets/sky/moon.svg" />
+                <image id="moon-text" x="1020" y="87" href="assets/sky/text-moon.svg" />
+
+                <image id="star-text" x="246" y="252" href="assets/sky/text-star.svg" clip-path="url(#star-text-clip)" />
+
+                <g id="cloud-text">
+                    <image id="cloud-text-text" x="170" y="670" href="assets/sky/text-cloud-text.svg" />
+                    <image id="cloud-text-cloud" x="180" y="580" href="assets/sky/text-cloud-cloud.svg" />
+                </g>
 
                 <!-- Ground stuffs -->
                 <image class="ground" id="back-mountain" y="611" x="-40" href="assets/ground/back-mountain.svg" />
@@ -77,12 +87,12 @@
                 <image id="cave" x="376" y="679" href="assets/ground/cave.svg" />
 
                 <!-- Clouds -->
-                <image class="cloud" x="-37" y="658" href="assets/sky/cloud.svg" />
-                <image class="cloud" x="99" y="582" href="assets/sky/cloud.svg" />
-                <image class="cloud" x="281" y="717" href="assets/sky/cloud.svg" />
-                <image class="cloud" x="577" y="587" href="assets/sky/cloud.svg" />
-                <image class="cloud" x="859" y="696" href="assets/sky/cloud.svg" />
-                <image class="cloud" x="1106" y="574" href="assets/sky/cloud.svg" />
+                <image class="cloud" x="-37" y="658" height="100" href="assets/sky/cloud.svg" />
+                <image class="cloud" x="99" y="582" height="100" href="assets/sky/cloud.svg" />
+                <image class="cloud" x="281" y="717" height="100" href="assets/sky/cloud.svg" />
+                <image class="cloud" x="577" y="587" height="100" href="assets/sky/cloud.svg" />
+                <image class="cloud" x="859" y="696" height="100" href="assets/sky/cloud.svg" />
+                <image class="cloud" x="1106" y="574" height="100" href="assets/sky/cloud.svg" />
 
                 <image class="ground" id="front-mountains" x="-275" y="569" href="assets/ground/front-mountains.svg" />
                 <image class="path" x="493" y="776" href="assets/ground/path-far-away.svg" />

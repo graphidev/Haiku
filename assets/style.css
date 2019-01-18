@@ -22,12 +22,6 @@ body > svg {
     overflow: hidden;
 }
 
-
-#moon {
-    transform-origin: center;
-    transition: transform ease-in-out .75s;
-}
-
 #moon-light-cold,
 #moon-light-hot {
     /* transition: opacity linear .5s; */
@@ -37,10 +31,14 @@ body > svg {
     opacity: 0;
 }
 
+#moon-text,
+#star-text,
+#cloud-text-text {
+    opacity: 0;
+}
+
 .cloud {
-    opacity: .99;
     transform-origin: center;
-    /* transition: transform ease-in-out 200ms; */
 }
 
 #cave,
