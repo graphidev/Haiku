@@ -191,9 +191,6 @@
             var cloudWidth = cloud.getBoundingClientRect().width;
             var containerWidth = canvasContainer.getAttribute('viewBox').split(' ')[2];
 
-            console.log(containerWidth);
-            console.log(cloudWidth);
-
             // Out of the viewbox to the right
             if(speedRatio > 0) {
 
