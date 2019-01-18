@@ -33,27 +33,22 @@
      * ---
      *
     **/
-    var actualizeAnimation = function(xRatio, yRatio, isOrientationSource) {
+    var actualizeAnimation = function(xRatio, yRatio) {
 
-        if(isOrientationSource) {
-            xRatio = xRatio * 1000;
-        }
-
-        console.log('xRatio: '+xRatio);
+        xRatio = (Math.abs(xRatio) < 1 ? xRatio : (xRatio < 0 ? -1 : 1));
+        yRatio = (yRatio < 0 ? 0 : (yRatio > 1 ? 1 : yRatio));
 
         // Front
-        var frontXMove = xRatio * .1;
-        var frontYMove = yRatio * .1;
-
-        console.log('frontXMove: '+frontXMove);
+        var frontXMove = 100 * xRatio;
+        var frontYMove = 25 * yRatio;
 
         samouraiLayer.style.transform = 'translate('+frontXMove+'px,'+frontYMove+'px)';
         bigTreeLayer.style.transform = 'translate('+frontXMove+'px,'+frontYMove+'px)';
         groundLayer.style.transform = 'translate('+frontXMove+'px,'+frontYMove+'px)';
 
         // Away
-        var firstPlanXMove = xRatio * .05;
-        var firstPlanYMove = yRatio * .05;
+        var firstPlanXMove = 50 * xRatio;
+        var firstPlanYMove = 12.5 * yRatio;
         hillsLayer.style.transform = 'translate('+firstPlanXMove+'px,'+firstPlanYMove+'px)';
         pathList[2].style.transform = 'translate('+firstPlanXMove+'px,'+firstPlanYMove+'px)';
         treeElements.forEach(function(tree) {
@@ -61,14 +56,14 @@
         })
 
         // Far away
-        var secondPlanXMove = xRatio * .025;
-        var secondPlanYMove = yRatio * .025;
+        var secondPlanXMove = 25 * xRatio;
+        var secondPlanYMove = 5.25 * yRatio;
         frontMountainsLayer.style.transform = 'translate('+secondPlanXMove+'px,'+secondPlanYMove+'px)';
         pathList[1].style.transform = 'translate('+secondPlanXMove+'px,'+secondPlanYMove+'px)';
 
         // Far far away
-        var thirdPlanXMove = xRatio * .0125;
-        var thirdPlanYMove = yRatio * .0125;
+        var thirdPlanXMove = 12.5 * xRatio;
+        var thirdPlanYMove = 3.125 * yRatio;
         backMountainLayer.style.transform = 'translate('+thirdPlanXMove+'px,'+thirdPlanYMove+'px)';
         caveLayer.style.transform = 'translate('+thirdPlanXMove+'px,'+thirdPlanYMove+'px)';
         pathList[0].style.transform = 'translate('+thirdPlanXMove+'px,'+thirdPlanYMove+'px)';
@@ -112,37 +107,49 @@
      * ---
      *
     **/
-    document.addEventListener('mousemove', function(mouseEvent) {
+    // if(!window.isMobileOrTablet() || !window.DeviceOrientationEvent) {
+    //
+        document.addEventListener('mousemove', function(mouseEvent) {
 
-        var mouseEvent = mouseEvent || window.event;
-        var containerLayer = canvasContainer.getBoundingClientRect();
-        var containerHeight = containerLayer.height;
-        var containerWidth = containerLayer.width;
+            var mouseEvent = mouseEvent || window.event;
+            var containerLayer = canvasContainer.getBoundingClientRect();
+            var containerHeight = containerLayer.height;
+            var containerWidth = containerLayer.width;
 
-        // Actualize speed
-        speedRatio = -5 + (10 * mouseEvent.pageX / containerWidth);
+            // Actualize speed
+            speedRatio = -5 + (10 * mouseEvent.pageX / containerWidth);
 
-        // Updating layers position
-        var xRatio = containerWidth/2 - mouseEvent.pageX;
-        var yRatio = mouseEvent.pageY/containerHeight;
+            // Updating layers position
+            var xRatio = mouseEvent.pageX/containerWidth/2;
+            var yRatio = mouseEvent.pageY/containerHeight;
 
-        actualizeAnimation(xRatio, yRatio, false);
+            actualizeAnimation(xRatio, yRatio);
 
-    }, false);
+        }, false);
+    //
+    //
+    // }
+    // else {
 
-    window.addEventListener('deviceorientation', function(deviceOrientation) {
+        window.addEventListener('deviceorientation', function(deviceOrientation) {
 
-        console.log(deviceOrientation.alpha);
+            var xRatio = (deviceOrientation.gamma)/45;
+            var yRatio = (deviceOrientation.beta)/45;
 
-        var xRatio = (deviceOrientation.alpha)/90;
-        var yRatio = (deviceOrientation.beta)/45;
+            if(window.isLandscape()){
+                actualizeAnimation(yRatio, (1 - xRatio), true);
+            }
+            else {
+                actualizeAnimation(xRatio, (1 - yRatio));
+            }
 
-        xRatio = (Math.abs(xRatio) < 1 ? xRatio : xRatio/xRatio);
-        yRatio = (yRatio < 0 ? 0 : (yRatio > 1 ? 1 : yRatio));
 
-        actualizeAnimation(xRatio, (1 - yRatio), true);
+        }, true)
 
-    }, true)
+    // }
+
+
+
 
 
 
